@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motor de Busca Científica</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>📚 Motor de Busca Científica</h1>
+
+<div class="search-area">
+<input type="text" id="searchInput" placeholder="Digite um tema...">
+
+<button onclick="buscarLivros()">Buscar</button>
+
+<select id="languageFilter">
+<option value="">Todos idiomas</option>
+<option value="pt">Português</option>
+<option value="en">Inglês</option>
+<option value="es">Espanhol</option>
+</select>
+
+<select id="sortPages">
+<option value="">Ordenar</option>
+<option value="asc">Menos páginas</option>
+<option value="desc">Mais páginas</option>
+</select>
+
+<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</div>
+</header>
+
+<div id="loader" class="loader hidden"></div>
+
+<h3 id="totalPages"></h3>
+
+<div id="results" class="grid"></div>
+
+<div class="pagination">
+<button onclick="prevPage()">Anterior</button>
+<span id="pageInfo"></span>
+<button onclick="nextPage()">Próximo</button>
+</div>
+
+<h2>⭐ Favoritos</h2>
+<div id="favorites" class="grid"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
